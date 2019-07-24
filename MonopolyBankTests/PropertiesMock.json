@@ -1,0 +1,39 @@
+
+[
+    {
+        "color": "brown",
+        "title": "AV Mediterraneo",
+        "listPrice": 60,
+        "mortgage": 30
+    },
+    {
+        "color": "pink",
+        "title": "Plaza San Carlos",
+        "listPrice": 140,
+        "mortgage": 70
+    },
+    {
+        "color": "red",
+        "title": "AV Kentucky",
+        "listPrice": 220,
+        "mortgage": 110
+    },
+    {
+        "color": "green",
+        "title": "AV Pacífico",
+        "listPrice": 300,
+        "mortgage": 150
+    },
+    {
+        "color": "black",
+        "title": "Reading",
+        "listPrice": 200,
+        "mortgage": 100
+    },
+    {
+        "color": "white",
+        "title": "Compañia de Electricidad",
+        "listPrice": 150,
+        "mortgage": 75
+    }
+]
