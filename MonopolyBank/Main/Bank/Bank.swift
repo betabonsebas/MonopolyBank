@@ -1,5 +1,5 @@
 //
-//  Game.swift
+//  Bank.swift
 //  MonopolyBank
 //
 //  Created by Sebastian Bonilla on 7/18/19.
