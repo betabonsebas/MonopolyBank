@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24C9CF4422E8FA1D004325DC /* NotificationName+Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4322E8FA1D004325DC /* NotificationName+Bank.swift */; };
+		24C9CF4822E90369004325DC /* MonopolyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4722E90369004325DC /* MonopolyTabBarController.swift */; };
+		24C9CF4A22E905A4004325DC /* UITabbar+Monopoly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4922E905A4004325DC /* UITabbar+Monopoly.swift */; };
+		24C9CF4D22E91AE7004325DC /* PickerAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4B22E91AE7004325DC /* PickerAlertViewController.swift */; };
 		B739564422E5FD6B000302FE /* RealEstateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564322E5FD6B000302FE /* RealEstateViewController.swift */; };
 		B739564622E60A47000302FE /* RealStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564522E60A47000302FE /* RealStateTests.swift */; };
 		B739564822E61284000302FE /* PropertiesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564722E61284000302FE /* PropertiesFactory.swift */; };
@@ -54,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24C9CF4322E8FA1D004325DC /* NotificationName+Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Bank.swift"; sourceTree = "<group>"; };
+		24C9CF4722E90369004325DC /* MonopolyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonopolyTabBarController.swift; sourceTree = "<group>"; };
+		24C9CF4922E905A4004325DC /* UITabbar+Monopoly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbar+Monopoly.swift"; sourceTree = "<group>"; };
+		24C9CF4B22E91AE7004325DC /* PickerAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerAlertViewController.swift; sourceTree = "<group>"; };
 		B739564322E5FD6B000302FE /* RealEstateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateViewController.swift; sourceTree = "<group>"; };
 		B739564522E60A47000302FE /* RealStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealStateTests.swift; sourceTree = "<group>"; };
 		B739564722E61284000302FE /* PropertiesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesFactory.swift; sourceTree = "<group>"; };
@@ -112,6 +120,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24C9CF4522E8FA2F004325DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				24C9CF4322E8FA1D004325DC /* NotificationName+Bank.swift */,
+				24C9CF4922E905A4004325DC /* UITabbar+Monopoly.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		24C9CF4622E902FA004325DC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				24C9CF4722E90369004325DC /* MonopolyTabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
 		B739564922E6136B000302FE /* Properties */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +205,8 @@
 		B792110522E1537C000446B5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				24C9CF4622E902FA004325DC /* Tabbar */,
+				24C9CF4522E8FA2F004325DC /* Extensions */,
 				B792111122E251B3000446B5 /* Resources */,
 				B792111022E251AA000446B5 /* Launch */,
 				B792110F22E25198000446B5 /* Main */,
@@ -197,6 +224,7 @@
 				B792111422E2526E000446B5 /* AccountTableViewCell.swift */,
 				B792111522E2526E000446B5 /* AccountTableViewCell.xib */,
 				B792111A22E2593B000446B5 /* BankViewModel.swift */,
+				24C9CF4B22E91AE7004325DC /* PickerAlertViewController.swift */,
 			);
 			path = Bank;
 			sourceTree = "<group>";
@@ -366,18 +394,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B792112522E2B8BC000446B5 /* PropertyData.swift in Sources */,
+				24C9CF4422E8FA1D004325DC /* NotificationName+Bank.swift in Sources */,
+				24C9CF4D22E91AE7004325DC /* PickerAlertViewController.swift in Sources */,
 				B792113222E2C411000446B5 /* Owner.swift in Sources */,
 				B739565B22E6C4E4000302FE /* RealEstateViewModel.swift in Sources */,
 				B792110D22E2464B000446B5 /* Property.swift in Sources */,
 				B792112E22E2BE28000446B5 /* FileReader.swift in Sources */,
 				B792113022E2C32E000446B5 /* RealEstate.swift in Sources */,
 				B792111B22E2593B000446B5 /* BankViewModel.swift in Sources */,
+				24C9CF4A22E905A4004325DC /* UITabbar+Monopoly.swift in Sources */,
 				B792110722E15401000446B5 /* Account.swift in Sources */,
 				B792110B22E155DF000446B5 /* Loan.swift in Sources */,
 				B792110922E15586000446B5 /* Bank.swift in Sources */,
 				B739565722E633F2000302FE /* FourStrata.swift in Sources */,
 				B79210E422E151E5000446B5 /* BankViewController.swift in Sources */,
 				B739566022E75FB7000302FE /* PropertyTableViewCell.swift in Sources */,
+				24C9CF4822E90369004325DC /* MonopolyTabBarController.swift in Sources */,
 				B792111622E2526E000446B5 /* AccountTableViewCell.swift in Sources */,
 				B739565322E633B8000302FE /* TwoStrata.swift in Sources */,
 				B739565122E6338B000302FE /* StrataProperty.swift in Sources */,

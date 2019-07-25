@@ -9,11 +9,17 @@
 import Foundation
 
 class RealEstateSection {
-    var properties: [Property]
-    var title: String
+    private var owner: Owner
     
-    init(properties: [Property], title: String) {
-        self.properties = properties
-        self.title = title
+    var properties: [Property] {
+        return owner.properties
+    }
+    
+    var title: String {
+        return owner.name
+    }
+    
+    init(owner: Owner) {
+        self.owner = owner
     }
 }

@@ -9,13 +9,18 @@
 import Foundation
 
 class RealEstate {
+    
+    private var propertiesFactory: PropertiesFactory
     private var owners: [Owner]
     var numberOfOwners: Int {
         return owners.count
     }
     
     init() {
-        owners = []
+        propertiesFactory = PropertiesFactory(file: "Properties")
+        let bank = Owner(name: "Banco")
+        bank.properties = propertiesFactory.properties
+        owners = [bank]
     }
     
     func ownerAt(_ position: Int) -> Owner {
@@ -23,7 +28,7 @@ class RealEstate {
     }
     
     func addOwner(_ owner: Owner) {
-        owners.append(owner)
+        owners.insert(owner, at: 0)
     }
     
     func property(_ property: Property, ownerName: String) throws {

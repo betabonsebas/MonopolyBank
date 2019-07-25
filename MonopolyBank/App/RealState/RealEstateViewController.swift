@@ -15,7 +15,13 @@ class RealEstateViewController: UIViewController {
     }
     
     @IBOutlet private weak var tableView: UITableView!
-    var viewModel: RealEstateViewModel!
+    var viewModel: RealEstateViewModel! {
+        didSet {
+            viewModel.reloadData = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,5 +53,54 @@ extension RealEstateViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel.titleFor(section: section)
+    }
+}
+
+extension RealEstateViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        var actions: [UIContextualAction] = []
+        actions.append(buyHotelAction(with: indexPath))
+        actions.append(buyHouseAction(with: indexPath))
+        return UISwipeActionsConfiguration(actions: actions)
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        var actions: [UIContextualAction] = []
+        actions.append(sellAction(with: indexPath))
+        return UISwipeActionsConfiguration(actions: actions)
+    }
+    
+    private func buyHouseAction(with indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "Casa") { [weak self] action, view, handler in
+//            self?.viewModel.loanForAccount(at: indexPath.row)
+            handler(true)
+        }
+        
+        action.image = UIImage(named: "house")
+        action.backgroundColor = UIColor.orange
+        return action
+    }
+    
+    private func buyHotelAction(with indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "Hotel") { [weak self] action, view, handler in
+//            self?.viewModel.payLoanForAccount(at: indexPath.row)
+            handler(true)
+        }
+        
+        action.image = UIImage(named: "hotel-star")
+        action.backgroundColor = UIColor.green
+        return action
+    }
+    
+    private func sellAction(with indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "Vender") { [weak self] action, view, handler in
+            //            self?.viewModel.payLoanForAccount(at: indexPath.row)
+            
+            handler(true)
+        }
+        
+        action.image = UIImage(named: "landlord")
+        action.backgroundColor = UIColor.green
+        return action
     }
 }

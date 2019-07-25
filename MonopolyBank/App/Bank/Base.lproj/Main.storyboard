@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="2632" y="-806"/>
         </scene>
-        <!--Real Estate View Controller-->
+        <!--Owners & Properties-->
         <scene sceneID="XAC-XA-y7Q">
             <objects>
                 <viewController id="IcU-kJ-XqH" customClass="RealEstateViewController" customModule="MonopolyBank" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,6 +64,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="IcU-kJ-XqH" id="lHG-QT-Suw"/>
+                                    <outlet property="delegate" destination="IcU-kJ-XqH" id="FbP-Ps-9e7"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -76,9 +77,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GKK-KW-Cx0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="12p-vD-Kcp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fxC-ce-zyL"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Owners &amp; Properties" id="12p-vD-Kcp"/>
                     <connections>
                         <outlet property="tableView" destination="a9I-SV-RbL" id="7dE-Qe-hRf"/>
                     </connections>
@@ -106,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="1846" y="-806"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Monopoly Tab Bar-->
         <scene sceneID="qjG-7v-Kdb">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tyS-YY-uSh" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tyS-YY-uSh" customClass="MonopolyTabBar" customModule="MonopolyBank" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GsD-AT-59C">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

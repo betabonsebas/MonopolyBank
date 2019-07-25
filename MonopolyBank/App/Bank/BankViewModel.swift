@@ -30,6 +30,7 @@ class BankViewModel {
             return
         }
         bank.addAccount(Account(playerName: name))
+        NotificationCenter.default.post(name: .bankCreateAccount, object: nil, userInfo: ["name": name])
         reloadAccounts?()
     }
     

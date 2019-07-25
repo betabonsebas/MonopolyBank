@@ -9,13 +9,14 @@
 import Foundation
 
 class RealEstateViewModel {
-    private var propertiesFactory: PropertiesFactory
     private var realEstate: RealEstate
     private var sections: [RealEstateSection] = []
     
+    var reloadData:(() -> Void)?
+    
     init() {
-        propertiesFactory = PropertiesFactory(file: "Properties")
         realEstate = RealEstate()
+        registerForNotifications()
         buildData()
     }
     
@@ -41,44 +42,30 @@ class RealEstateViewModel {
         buildData()
     }
     
+    private func registerForNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(createOwnerByAccountName(_:)),
+                                               name: .bankCreateAccount,
+                                               object: nil)
+    }
+    
+    @objc private func createOwnerByAccountName(_ notification: Notification) {
+        guard let userInfo = notification.userInfo, let name = userInfo["name"] as? String else {
+            return
+        }
+        addOwner(with: name)
+    }
+    
     private func buildData() {
         sections = []
         buildOwnerSections()
-        buildPropertiesSections()
+        reloadData?()
     }
     
     private func buildOwnerSections() {
-        for section in 0...realEstate.numberOfOwners {
+        for section in 0..<realEstate.numberOfOwners {
             let owner = realEstate.ownerAt(section)
-            sections.append(RealEstateSection(properties: owner.properties, title: owner.name))
+            sections.append(RealEstateSection(owner: owner))
         }
-    }
-    
-    private func buildPropertiesSections() {
-        sections.append(OneStataProperties)
-        sections.append(TwoStataProperties)
-        sections.append(ThreeStataProperties)
-        sections.append(FourStataProperties)
-        sections.append(TrainProperties)
-        sections.append(UtilityProperties)
-    }
-    
-    private var OneStataProperties: RealEstateSection {
-        return RealEstateSection(properties: propertiesFactory.makeOneStrataProperties(), title: "Estrato Uno")
-    }
-    private var TwoStataProperties: RealEstateSection {
-        return RealEstateSection(properties: propertiesFactory.makeTwoStrataProperties(), title: "Estrato Dos")
-    }
-    private var ThreeStataProperties: RealEstateSection {
-        return RealEstateSection(properties: propertiesFactory.makeThreeStrataProperties(), title: "Estrato Tres")
-    }
-    private var FourStataProperties: RealEstateSection {
-        return RealEstateSection(properties: propertiesFactory.makeFourStrataProperties(), title: "Estrato Cuatro")
-    }
-    private var UtilityProperties: RealEstateSection {
-        return RealEstateSection(properties: propertiesFactory.makeUtilitiesProperties(), title: "Servicios")
-    }
-    private var TrainProperties: RealEstateSection {
-        return RealEstateSection(properties: propertiesFactory.makeTrainsProperties(), title: "Trenes")
     }
 }

@@ -15,27 +15,38 @@ class PropertiesFactory {
         self.data = FileReader.readData(fileName: file)
     }
     
-    func makeOneStrataProperties() -> [OneStrata] {
+    var properties: [Property] {
+        var ps: [Property] = []
+        ps.append(contentsOf: makeOneStrataProperties())
+        ps.append(contentsOf: makeTwoStrataProperties())
+        ps.append(contentsOf: makeThreeStrataProperties())
+        ps.append(contentsOf: makeFourStrataProperties())
+        ps.append(contentsOf: makeTrainsProperties())
+        ps.append(contentsOf: makeUtilitiesProperties())
+        return ps
+    }
+    
+    private func makeOneStrataProperties() -> [OneStrata] {
         return data?.filter{ $0.color.contains("brown") || $0.color.contains("lightBlue") }.map{ OneStrata(data: $0) } ?? []
     }
     
-    func makeTwoStrataProperties() -> [TwoStrata] {
+    private func makeTwoStrataProperties() -> [TwoStrata] {
         return data?.filter{ $0.color.contains("pink") || $0.color.contains("orange") }.map{ TwoStrata(data: $0) } ?? []
     }
     
-    func makeThreeStrataProperties() -> [ThreeStrata] {
+    private func makeThreeStrataProperties() -> [ThreeStrata] {
         return data?.filter{ $0.color.contains("red") || $0.color.contains("yellow") }.map{ ThreeStrata(data: $0) } ?? []
     }
     
-    func makeFourStrataProperties() -> [FourStrata] {
+    private func makeFourStrataProperties() -> [FourStrata] {
         return data?.filter{ $0.color.contains("green") || $0.color.contains("blue") }.map{ FourStrata(data: $0) } ?? []
     }
     
-    func makeUtilitiesProperties() -> [Utility] {
+    private func makeUtilitiesProperties() -> [Utility] {
         return data?.filter{ $0.color.contains("white") }.map{ Utility(data: $0) } ?? []
     }
     
-    func makeTrainsProperties() -> [Train] {
+    private func makeTrainsProperties() -> [Train] {
         return data?.filter{ $0.color.contains("black") }.map{ Train(data: $0) } ?? []
     }
     
