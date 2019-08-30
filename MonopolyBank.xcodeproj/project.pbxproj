@@ -10,7 +10,6 @@
 		24C9CF4422E8FA1D004325DC /* NotificationName+Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4322E8FA1D004325DC /* NotificationName+Bank.swift */; };
 		24C9CF4822E90369004325DC /* MonopolyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4722E90369004325DC /* MonopolyTabBarController.swift */; };
 		24C9CF4A22E905A4004325DC /* UITabbar+Monopoly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4922E905A4004325DC /* UITabbar+Monopoly.swift */; };
-		24C9CF4D22E91AE7004325DC /* PickerAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4B22E91AE7004325DC /* PickerAlertViewController.swift */; };
 		B739564422E5FD6B000302FE /* RealEstateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564322E5FD6B000302FE /* RealEstateViewController.swift */; };
 		B739564622E60A47000302FE /* RealStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564522E60A47000302FE /* RealStateTests.swift */; };
 		B739564822E61284000302FE /* PropertiesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564722E61284000302FE /* PropertiesFactory.swift */; };
@@ -61,7 +60,6 @@
 		24C9CF4322E8FA1D004325DC /* NotificationName+Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Bank.swift"; sourceTree = "<group>"; };
 		24C9CF4722E90369004325DC /* MonopolyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonopolyTabBarController.swift; sourceTree = "<group>"; };
 		24C9CF4922E905A4004325DC /* UITabbar+Monopoly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbar+Monopoly.swift"; sourceTree = "<group>"; };
-		24C9CF4B22E91AE7004325DC /* PickerAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerAlertViewController.swift; sourceTree = "<group>"; };
 		B739564322E5FD6B000302FE /* RealEstateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateViewController.swift; sourceTree = "<group>"; };
 		B739564522E60A47000302FE /* RealStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealStateTests.swift; sourceTree = "<group>"; };
 		B739564722E61284000302FE /* PropertiesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesFactory.swift; sourceTree = "<group>"; };
@@ -224,7 +222,6 @@
 				B792111422E2526E000446B5 /* AccountTableViewCell.swift */,
 				B792111522E2526E000446B5 /* AccountTableViewCell.xib */,
 				B792111A22E2593B000446B5 /* BankViewModel.swift */,
-				24C9CF4B22E91AE7004325DC /* PickerAlertViewController.swift */,
 			);
 			path = Bank;
 			sourceTree = "<group>";
@@ -395,7 +392,6 @@
 			files = (
 				B792112522E2B8BC000446B5 /* PropertyData.swift in Sources */,
 				24C9CF4422E8FA1D004325DC /* NotificationName+Bank.swift in Sources */,
-				24C9CF4D22E91AE7004325DC /* PickerAlertViewController.swift in Sources */,
 				B792113222E2C411000446B5 /* Owner.swift in Sources */,
 				B739565B22E6C4E4000302FE /* RealEstateViewModel.swift in Sources */,
 				B792110D22E2464B000446B5 /* Property.swift in Sources */,

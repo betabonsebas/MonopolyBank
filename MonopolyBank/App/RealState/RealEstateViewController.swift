@@ -20,6 +20,15 @@ class RealEstateViewController: UIViewController {
             viewModel.reloadData = { [weak self] in
                 self?.tableView.reloadData()
             }
+            
+            viewModel.showMessage = { [weak self] (message) in
+                guard let alert = self?.warningAlert(message) else { return }
+                self?.present(alert, animated: true, completion: nil)
+            }
+            
+            viewModel.sellPropertyFrom = { [weak self] (owner, property) in
+                self?.exchange(property: property, from: owner)
+            }
         }
     }
     
@@ -29,9 +38,49 @@ class RealEstateViewController: UIViewController {
         configureTableView()
     }
     
+    private func exchange(property: Property, from: String) {
+        capturePlayerName { [weak self] (toOwner) in
+            self?.viewModel.sellProperty(property, from: from, to: toOwner ?? "")
+        }
+    }
+    
     private func configureTableView() {
         let propertyCellNib = UINib(nibName: PropertyTableViewCell.nibName, bundle: nil)
         tableView.register(propertyCellNib, forCellReuseIdentifier: Constants.propertyCellReuseIdentifier)
+    }
+    
+    private func capturePlayerName(completion: @escaping (_ playername: String?) -> Void) {
+        let alert = newOwnerAlert()
+        alert.addTextField(configurationHandler: nil)
+        alert.addAction(continueAlertAction(handler: { _ in
+            completion(alert.textFields?[0].text)
+        }))
+        alert.addAction(cancelAlertAction(handler: { _ in
+            completion(nil)
+        }))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func newOwnerAlert() -> UIAlertController {
+        return UIAlertController(title: "Nuevo Propietario", message: "Ingresa el nombre del comprador de la propiedad.", preferredStyle: .alert)
+    }
+    
+    private func continueAlertAction(handler: @escaping (UIAlertAction) -> Void) -> UIAlertAction {
+        return UIAlertAction(title: "Continuar", style: .default, handler: handler)
+    }
+    
+    private func cancelAlertAction(handler: @escaping (UIAlertAction) -> Void) -> UIAlertAction {
+        return UIAlertAction(title: "Cancelar", style: .cancel, handler: handler)
+    }
+    
+    private func aceptAlertAction(handler: @escaping (UIAlertAction) -> Void) -> UIAlertAction {
+        return UIAlertAction(title: "Continuar", style: .default, handler: handler)
+    }
+    
+    private func warningAlert(_ message: String) -> UIAlertController {
+        let alert = UIAlertController(title: "Atención", message: message, preferredStyle: .alert)
+        alert.addAction(aceptAlertAction(handler: { (_) in }))
+        return alert
     }
 
 }
@@ -72,7 +121,7 @@ extension RealEstateViewController: UITableViewDelegate {
     
     private func buyHouseAction(with indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "Casa") { [weak self] action, view, handler in
-//            self?.viewModel.loanForAccount(at: indexPath.row)
+            self?.viewModel.buildHouseForProperty(at: indexPath.section, position: indexPath.row)
             handler(true)
         }
         
@@ -83,7 +132,7 @@ extension RealEstateViewController: UITableViewDelegate {
     
     private func buyHotelAction(with indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "Hotel") { [weak self] action, view, handler in
-//            self?.viewModel.payLoanForAccount(at: indexPath.row)
+            self?.viewModel.buildHotelForProperty(at: indexPath.section, position: indexPath.row)
             handler(true)
         }
         
@@ -94,8 +143,7 @@ extension RealEstateViewController: UITableViewDelegate {
     
     private func sellAction(with indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "Vender") { [weak self] action, view, handler in
-            //            self?.viewModel.payLoanForAccount(at: indexPath.row)
-            
+            self?.viewModel.sellProperty(at: indexPath.section, position: indexPath.row)
             handler(true)
         }
         

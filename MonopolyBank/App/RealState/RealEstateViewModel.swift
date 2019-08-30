@@ -13,6 +13,8 @@ class RealEstateViewModel {
     private var sections: [RealEstateSection] = []
     
     var reloadData:(() -> Void)?
+    var showMessage:((String) -> Void)?
+    var sellPropertyFrom:((String, Property) -> Void)?
     
     init() {
         realEstate = RealEstate()
@@ -40,6 +42,44 @@ class RealEstateViewModel {
         let owner = Owner(name: name)
         realEstate.addOwner(owner)
         buildData()
+    }
+    
+    func sellProperty(at section: Int, position: Int) {
+        let owner = sections[section].title
+        let property = sections[section].properties[position]
+        sellPropertyFrom?(owner, property)
+    }
+    
+    func sellProperty(_ property: Property, from: String, to: String) {
+        do {
+            try realEstate.buyProperty(property, ownerName: to)
+            try realEstate.sellProperty(property.title, from: from)
+        } catch let error {
+            showMessage?(error.localizedDescription)
+        }
+        reloadData?()
+    }
+    
+    func buildHouseForProperty(at section: Int, position: Int) {
+        let property = self.itemFor(section: section, at: position)
+        do {
+            let price = try property.buildHouses(1)
+            showMessage?("El valor de la casa es \(price)")
+        }catch let error {
+            showMessage?(error.localizedDescription)
+        }
+        reloadData?()
+    }
+    
+    func buildHotelForProperty(at section: Int, position: Int) {
+        let property = self.itemFor(section: section, at: position)
+        do {
+            let price = try property.buildHotels(1)
+            showMessage?("El valor del hotel es \(price)")
+        }catch let error {
+            showMessage?(error.localizedDescription)
+        }
+        reloadData?()
     }
     
     private func registerForNotifications() {

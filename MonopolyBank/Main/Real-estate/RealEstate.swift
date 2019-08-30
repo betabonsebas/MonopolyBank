@@ -31,7 +31,7 @@ class RealEstate {
         owners.insert(owner, at: 0)
     }
     
-    func property(_ property: Property, ownerName: String) throws {
+    func buyProperty(_ property: Property, ownerName: String) throws {
         guard let owner = owner(for: ownerName) else {
             throw BankException.accountNotFoundError
         }

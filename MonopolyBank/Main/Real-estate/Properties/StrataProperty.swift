@@ -34,9 +34,10 @@ extension StrataProperty {
     }
     
     func buildHouses(_ number: Int) throws -> Int {
-        if number > 4 || numberOfHouses == 4 || (numberOfHouses + number) > 4 {
+        if number > 4 || numberOfHouses == 4 || (numberOfHouses + number) > 4 || numberOfHotels > 0 {
             throw RealStateException.exceedsBuildsAllowed
         }
+        
         numberOfHouses += number
         return number * buildingPrice
     }
@@ -45,6 +46,12 @@ extension StrataProperty {
         if number > 1 || numberOfHotels > 0 {
             throw RealStateException.exceedsBuildsAllowed
         }
+        
+        if numberOfHouses < 4 {
+            throw RealStateException.noBuildsFound
+        }
+        
+        numberOfHouses = 0
         numberOfHotels += number
         return number * buildingPrice
     }
@@ -53,6 +60,7 @@ extension StrataProperty {
         if number > numberOfHouses {
             throw RealStateException.noBuildsFound
         }
+        
         numberOfHouses -= number
         return number * buildingSellPrice
     }
@@ -61,6 +69,7 @@ extension StrataProperty {
         if number > numberOfHotels {
             throw RealStateException.noBuildsFound
         }
+        
         numberOfHotels -= number
         return number * (buildingSellPrice + (buildingSellPrice * 4))
     }
