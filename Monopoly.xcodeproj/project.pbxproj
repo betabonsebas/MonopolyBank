@@ -75,7 +75,7 @@
 		B739565C22E6C928000302FE /* RealEstateSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateSection.swift; sourceTree = "<group>"; };
 		B739565E22E75FB7000302FE /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
 		B739565F22E75FB7000302FE /* PropertyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertyTableViewCell.xib; sourceTree = "<group>"; };
-		B79210DE22E151E5000446B5 /* MonopolyBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonopolyBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79210DE22E151E5000446B5 /* Monopoly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monopoly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79210E122E151E5000446B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B79210E322E151E5000446B5 /* BankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankViewController.swift; sourceTree = "<group>"; };
 		B79210E622E151E5000446B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		B79210EB22E151E6000446B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B79210EE22E151E6000446B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B79210F022E151E6000446B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B79210F522E151E6000446B5 /* MonopolyBankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonopolyBankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B79210F522E151E6000446B5 /* MonopolyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonopolyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79210F922E151E6000446B5 /* MonopolyBankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonopolyBankTests.swift; sourceTree = "<group>"; };
 		B79210FB22E151E6000446B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B792110622E15401000446B5 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -154,8 +154,8 @@
 		B79210D522E151E5000446B5 = {
 			isa = PBXGroup;
 			children = (
-				B79210E022E151E5000446B5 /* MonopolyBank */,
-				B79210F822E151E6000446B5 /* MonopolyBankTests */,
+				B79210E022E151E5000446B5 /* Monopoly */,
+				B79210F822E151E6000446B5 /* MonopolyTests */,
 				B79210DF22E151E5000446B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -163,22 +163,22 @@
 		B79210DF22E151E5000446B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B79210DE22E151E5000446B5 /* MonopolyBank.app */,
-				B79210F522E151E6000446B5 /* MonopolyBankTests.xctest */,
+				B79210DE22E151E5000446B5 /* Monopoly.app */,
+				B79210F522E151E6000446B5 /* MonopolyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B79210E022E151E5000446B5 /* MonopolyBank */ = {
+		B79210E022E151E5000446B5 /* Monopoly */ = {
 			isa = PBXGroup;
 			children = (
 				B792110522E1537C000446B5 /* App */,
 				B792110422E1536F000446B5 /* Main */,
 			);
-			path = MonopolyBank;
+			path = Monopoly;
 			sourceTree = "<group>";
 		};
-		B79210F822E151E6000446B5 /* MonopolyBankTests */ = {
+		B79210F822E151E6000446B5 /* MonopolyTests */ = {
 			isa = PBXGroup;
 			children = (
 				B739565822E63AC4000302FE /* PropertiesMock.json */,
@@ -186,7 +186,7 @@
 				B79210FB22E151E6000446B5 /* Info.plist */,
 				B739564522E60A47000302FE /* RealStateTests.swift */,
 			);
-			path = MonopolyBankTests;
+			path = MonopolyTests;
 			sourceTree = "<group>";
 		};
 		B792110422E1536F000446B5 /* Main */ = {
@@ -288,9 +288,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B79210DD22E151E5000446B5 /* MonopolyBank */ = {
+		B79210DD22E151E5000446B5 /* Monopoly */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B79210FE22E151E6000446B5 /* Build configuration list for PBXNativeTarget "MonopolyBank" */;
+			buildConfigurationList = B79210FE22E151E6000446B5 /* Build configuration list for PBXNativeTarget "Monopoly" */;
 			buildPhases = (
 				B79210DA22E151E5000446B5 /* Sources */,
 				B79210DB22E151E5000446B5 /* Frameworks */,
@@ -300,14 +300,14 @@
 			);
 			dependencies = (
 			);
-			name = MonopolyBank;
+			name = Monopoly;
 			productName = MonopolyBank;
-			productReference = B79210DE22E151E5000446B5 /* MonopolyBank.app */;
+			productReference = B79210DE22E151E5000446B5 /* Monopoly.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B79210F422E151E6000446B5 /* MonopolyBankTests */ = {
+		B79210F422E151E6000446B5 /* MonopolyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B792110122E151E6000446B5 /* Build configuration list for PBXNativeTarget "MonopolyBankTests" */;
+			buildConfigurationList = B792110122E151E6000446B5 /* Build configuration list for PBXNativeTarget "MonopolyTests" */;
 			buildPhases = (
 				B79210F122E151E6000446B5 /* Sources */,
 				B79210F222E151E6000446B5 /* Frameworks */,
@@ -318,9 +318,9 @@
 			dependencies = (
 				B79210F722E151E6000446B5 /* PBXTargetDependency */,
 			);
-			name = MonopolyBankTests;
+			name = MonopolyTests;
 			productName = MonopolyBankTests;
-			productReference = B79210F522E151E6000446B5 /* MonopolyBankTests.xctest */;
+			productReference = B79210F522E151E6000446B5 /* MonopolyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -342,7 +342,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B79210D922E151E5000446B5 /* Build configuration list for PBXProject "MonopolyBank" */;
+			buildConfigurationList = B79210D922E151E5000446B5 /* Build configuration list for PBXProject "Monopoly" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -355,8 +355,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B79210DD22E151E5000446B5 /* MonopolyBank */,
-				B79210F422E151E6000446B5 /* MonopolyBankTests */,
+				B79210DD22E151E5000446B5 /* Monopoly */,
+				B79210F422E151E6000446B5 /* MonopolyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -435,7 +435,7 @@
 /* Begin PBXTargetDependency section */
 		B79210F722E151E6000446B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B79210DD22E151E5000446B5 /* MonopolyBank */;
+			target = B79210DD22E151E5000446B5 /* Monopoly */;
 			targetProxy = B79210F622E151E6000446B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -582,7 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2WD4LJ5535;
-				INFOPLIST_FILE = MonopolyBank/App/Main/Info.plist;
+				INFOPLIST_FILE = Monopoly/App/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -600,7 +600,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2WD4LJ5535;
-				INFOPLIST_FILE = MonopolyBank/App/Main/Info.plist;
+				INFOPLIST_FILE = Monopoly/App/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -629,7 +629,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonopolyBank.app/MonopolyBank";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly.app/Monopoly";
 			};
 			name = Debug;
 		};
@@ -650,14 +650,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MonopolyBank.app/MonopolyBank";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly.app/Monopoly";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B79210D922E151E5000446B5 /* Build configuration list for PBXProject "MonopolyBank" */ = {
+		B79210D922E151E5000446B5 /* Build configuration list for PBXProject "Monopoly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B79210FC22E151E6000446B5 /* Debug */,
@@ -666,7 +666,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B79210FE22E151E6000446B5 /* Build configuration list for PBXNativeTarget "MonopolyBank" */ = {
+		B79210FE22E151E6000446B5 /* Build configuration list for PBXNativeTarget "Monopoly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B79210FF22E151E6000446B5 /* Debug */,
@@ -675,7 +675,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B792110122E151E6000446B5 /* Build configuration list for PBXNativeTarget "MonopolyBankTests" */ = {
+		B792110122E151E6000446B5 /* Build configuration list for PBXNativeTarget "MonopolyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B792110222E151E6000446B5 /* Debug */,
