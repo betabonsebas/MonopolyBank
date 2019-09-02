@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244CA55C2319C20F00B12510 /* PropertiesMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 244CA55A2319C20E00B12510 /* PropertiesMock.json */; };
+		244CA55D2319C20F00B12510 /* RealStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CA55B2319C20E00B12510 /* RealStateTests.swift */; };
+		246C93092319C08300BD687C /* MonopolyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246C93012319C06700BD687C /* MonopolyTests.swift */; };
 		24C9CF4422E8FA1D004325DC /* NotificationName+Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4322E8FA1D004325DC /* NotificationName+Bank.swift */; };
 		24C9CF4822E90369004325DC /* MonopolyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4722E90369004325DC /* MonopolyTabBarController.swift */; };
 		24C9CF4A22E905A4004325DC /* UITabbar+Monopoly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C9CF4922E905A4004325DC /* UITabbar+Monopoly.swift */; };
 		B739564422E5FD6B000302FE /* RealEstateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564322E5FD6B000302FE /* RealEstateViewController.swift */; };
-		B739564622E60A47000302FE /* RealStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564522E60A47000302FE /* RealStateTests.swift */; };
 		B739564822E61284000302FE /* PropertiesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564722E61284000302FE /* PropertiesFactory.swift */; };
 		B739564B22E619A9000302FE /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564A22E619A9000302FE /* Utility.swift */; };
 		B739564D22E61B27000302FE /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739564C22E61B27000302FE /* Train.swift */; };
@@ -20,7 +22,6 @@
 		B739565322E633B8000302FE /* TwoStrata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739565222E633B8000302FE /* TwoStrata.swift */; };
 		B739565522E633D8000302FE /* ThreeStrata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739565422E633D8000302FE /* ThreeStrata.swift */; };
 		B739565722E633F2000302FE /* FourStrata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739565622E633F2000302FE /* FourStrata.swift */; };
-		B739565922E63AC4000302FE /* PropertiesMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B739565822E63AC4000302FE /* PropertiesMock.json */; };
 		B739565B22E6C4E4000302FE /* RealEstateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739565A22E6C4E3000302FE /* RealEstateViewModel.swift */; };
 		B739565D22E6C928000302FE /* RealEstateSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739565C22E6C928000302FE /* RealEstateSection.swift */; };
 		B739566022E75FB7000302FE /* PropertyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739565E22E75FB7000302FE /* PropertyTableViewCell.swift */; };
@@ -31,9 +32,8 @@
 		B79210EA22E151E5000446B5 /* MonopolyBank.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B79210E822E151E5000446B5 /* MonopolyBank.xcdatamodeld */; };
 		B79210EC22E151E6000446B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B79210EB22E151E6000446B5 /* Assets.xcassets */; };
 		B79210EF22E151E6000446B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79210ED22E151E6000446B5 /* LaunchScreen.storyboard */; };
-		B79210FA22E151E6000446B5 /* MonopolyBankTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79210F922E151E6000446B5 /* MonopolyBankTests.swift */; };
-		B792110722E15401000446B5 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792110622E15401000446B5 /* Account.swift */; };
-		B792110922E15586000446B5 /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792110822E15586000446B5 /* Bank.swift */; };
+		B792110722E15401000446B5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792110622E15401000446B5 /* Player.swift */; };
+		B792110922E15586000446B5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792110822E15586000446B5 /* Game.swift */; };
 		B792110B22E155DF000446B5 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792110A22E155DF000446B5 /* Loan.swift */; };
 		B792110D22E2464B000446B5 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792110C22E2464B000446B5 /* Property.swift */; };
 		B792111622E2526E000446B5 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792111422E2526E000446B5 /* AccountTableViewCell.swift */; };
@@ -43,25 +43,28 @@
 		B792112522E2B8BC000446B5 /* PropertyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792112422E2B8BC000446B5 /* PropertyData.swift */; };
 		B792112E22E2BE28000446B5 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792112D22E2BE28000446B5 /* FileReader.swift */; };
 		B792113022E2C32E000446B5 /* RealEstate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792112F22E2C32E000446B5 /* RealEstate.swift */; };
-		B792113222E2C411000446B5 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792113122E2C411000446B5 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B79210F622E151E6000446B5 /* PBXContainerItemProxy */ = {
+		246C93042319C06700BD687C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B79210D622E151E5000446B5 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B79210DD22E151E5000446B5;
-			remoteInfo = MonopolyBank;
+			remoteInfo = Monopoly;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		244CA55A2319C20E00B12510 /* PropertiesMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PropertiesMock.json; sourceTree = "<group>"; };
+		244CA55B2319C20E00B12510 /* RealStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealStateTests.swift; sourceTree = "<group>"; };
+		246C92FF2319C06700BD687C /* MonopolyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonopolyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		246C93012319C06700BD687C /* MonopolyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonopolyTests.swift; sourceTree = "<group>"; };
+		246C93032319C06700BD687C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C9CF4322E8FA1D004325DC /* NotificationName+Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Bank.swift"; sourceTree = "<group>"; };
 		24C9CF4722E90369004325DC /* MonopolyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonopolyTabBarController.swift; sourceTree = "<group>"; };
 		24C9CF4922E905A4004325DC /* UITabbar+Monopoly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbar+Monopoly.swift"; sourceTree = "<group>"; };
 		B739564322E5FD6B000302FE /* RealEstateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateViewController.swift; sourceTree = "<group>"; };
-		B739564522E60A47000302FE /* RealStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealStateTests.swift; sourceTree = "<group>"; };
 		B739564722E61284000302FE /* PropertiesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesFactory.swift; sourceTree = "<group>"; };
 		B739564A22E619A9000302FE /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B739564C22E61B27000302FE /* Train.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Train.swift; sourceTree = "<group>"; };
@@ -70,7 +73,6 @@
 		B739565222E633B8000302FE /* TwoStrata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoStrata.swift; sourceTree = "<group>"; };
 		B739565422E633D8000302FE /* ThreeStrata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeStrata.swift; sourceTree = "<group>"; };
 		B739565622E633F2000302FE /* FourStrata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourStrata.swift; sourceTree = "<group>"; };
-		B739565822E63AC4000302FE /* PropertiesMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PropertiesMock.json; sourceTree = "<group>"; };
 		B739565A22E6C4E3000302FE /* RealEstateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateViewModel.swift; sourceTree = "<group>"; };
 		B739565C22E6C928000302FE /* RealEstateSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstateSection.swift; sourceTree = "<group>"; };
 		B739565E22E75FB7000302FE /* PropertyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTableViewCell.swift; sourceTree = "<group>"; };
@@ -83,11 +85,8 @@
 		B79210EB22E151E6000446B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B79210EE22E151E6000446B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B79210F022E151E6000446B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B79210F522E151E6000446B5 /* MonopolyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonopolyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B79210F922E151E6000446B5 /* MonopolyBankTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonopolyBankTests.swift; sourceTree = "<group>"; };
-		B79210FB22E151E6000446B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B792110622E15401000446B5 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		B792110822E15586000446B5 /* Bank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		B792110622E15401000446B5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		B792110822E15586000446B5 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B792110A22E155DF000446B5 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 		B792110C22E2464B000446B5 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		B792111422E2526E000446B5 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,18 +96,17 @@
 		B792112422E2B8BC000446B5 /* PropertyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyData.swift; sourceTree = "<group>"; };
 		B792112D22E2BE28000446B5 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		B792112F22E2C32E000446B5 /* RealEstate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealEstate.swift; sourceTree = "<group>"; };
-		B792113122E2C411000446B5 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B79210DB22E151E5000446B5 /* Frameworks */ = {
+		246C92FC2319C06700BD687C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B79210F222E151E6000446B5 /* Frameworks */ = {
+		B79210DB22E151E5000446B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -118,6 +116,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246C93002319C06700BD687C /* MonopolyTests */ = {
+			isa = PBXGroup;
+			children = (
+				244CA55A2319C20E00B12510 /* PropertiesMock.json */,
+				244CA55B2319C20E00B12510 /* RealStateTests.swift */,
+				246C93012319C06700BD687C /* MonopolyTests.swift */,
+				246C93032319C06700BD687C /* Info.plist */,
+			);
+			path = MonopolyTests;
+			sourceTree = "<group>";
+		};
 		24C9CF4522E8FA2F004325DC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				B79210E022E151E5000446B5 /* Monopoly */,
-				B79210F822E151E6000446B5 /* MonopolyTests */,
+				246C93002319C06700BD687C /* MonopolyTests */,
 				B79210DF22E151E5000446B5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				B79210DE22E151E5000446B5 /* Monopoly.app */,
-				B79210F522E151E6000446B5 /* MonopolyTests.xctest */,
+				246C92FF2319C06700BD687C /* MonopolyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,17 +185,6 @@
 				B792110422E1536F000446B5 /* Main */,
 			);
 			path = Monopoly;
-			sourceTree = "<group>";
-		};
-		B79210F822E151E6000446B5 /* MonopolyTests */ = {
-			isa = PBXGroup;
-			children = (
-				B739565822E63AC4000302FE /* PropertiesMock.json */,
-				B79210F922E151E6000446B5 /* MonopolyBankTests.swift */,
-				B79210FB22E151E6000446B5 /* Info.plist */,
-				B739564522E60A47000302FE /* RealStateTests.swift */,
-			);
-			path = MonopolyTests;
 			sourceTree = "<group>";
 		};
 		B792110422E1536F000446B5 /* Main */ = {
@@ -254,8 +252,8 @@
 		B792112222E2B84E000446B5 /* Bank */ = {
 			isa = PBXGroup;
 			children = (
-				B792110622E15401000446B5 /* Account.swift */,
-				B792110822E15586000446B5 /* Bank.swift */,
+				B792110622E15401000446B5 /* Player.swift */,
+				B792110822E15586000446B5 /* Game.swift */,
 				B792110A22E155DF000446B5 /* Loan.swift */,
 			);
 			path = Bank;
@@ -267,7 +265,6 @@
 				B739564922E6136B000302FE /* Properties */,
 				B792112D22E2BE28000446B5 /* FileReader.swift */,
 				B792112F22E2C32E000446B5 /* RealEstate.swift */,
-				B792113122E2C411000446B5 /* Owner.swift */,
 				B739564722E61284000302FE /* PropertiesFactory.swift */,
 			);
 			path = "Real-estate";
@@ -288,6 +285,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		246C92FE2319C06700BD687C /* MonopolyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 246C93062319C06700BD687C /* Build configuration list for PBXNativeTarget "MonopolyTests" */;
+			buildPhases = (
+				246C92FB2319C06700BD687C /* Sources */,
+				246C92FC2319C06700BD687C /* Frameworks */,
+				246C92FD2319C06700BD687C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				246C93052319C06700BD687C /* PBXTargetDependency */,
+			);
+			name = MonopolyTests;
+			productName = MonopolyTests;
+			productReference = 246C92FF2319C06700BD687C /* MonopolyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B79210DD22E151E5000446B5 /* Monopoly */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B79210FE22E151E6000446B5 /* Build configuration list for PBXNativeTarget "Monopoly" */;
@@ -305,40 +320,22 @@
 			productReference = B79210DE22E151E5000446B5 /* Monopoly.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B79210F422E151E6000446B5 /* MonopolyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B792110122E151E6000446B5 /* Build configuration list for PBXNativeTarget "MonopolyTests" */;
-			buildPhases = (
-				B79210F122E151E6000446B5 /* Sources */,
-				B79210F222E151E6000446B5 /* Frameworks */,
-				B79210F322E151E6000446B5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B79210F722E151E6000446B5 /* PBXTargetDependency */,
-			);
-			name = MonopolyTests;
-			productName = MonopolyBankTests;
-			productReference = B79210F522E151E6000446B5 /* MonopolyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B79210D622E151E5000446B5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = bonsebas;
 				TargetAttributes = {
+					246C92FE2319C06700BD687C = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = B79210DD22E151E5000446B5;
+					};
 					B79210DD22E151E5000446B5 = {
 						CreatedOnToolsVersion = 10.2.1;
-					};
-					B79210F422E151E6000446B5 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = B79210DD22E151E5000446B5;
 					};
 				};
 			};
@@ -356,12 +353,20 @@
 			projectRoot = "";
 			targets = (
 				B79210DD22E151E5000446B5 /* Monopoly */,
-				B79210F422E151E6000446B5 /* MonopolyTests */,
+				246C92FE2319C06700BD687C /* MonopolyTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		246C92FD2319C06700BD687C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244CA55C2319C20F00B12510 /* PropertiesMock.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B79210DC22E151E5000446B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,33 +380,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B79210F322E151E6000446B5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B739565922E63AC4000302FE /* PropertiesMock.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		246C92FB2319C06700BD687C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				246C93092319C08300BD687C /* MonopolyTests.swift in Sources */,
+				244CA55D2319C20F00B12510 /* RealStateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B79210DA22E151E5000446B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B792112522E2B8BC000446B5 /* PropertyData.swift in Sources */,
 				24C9CF4422E8FA1D004325DC /* NotificationName+Bank.swift in Sources */,
-				B792113222E2C411000446B5 /* Owner.swift in Sources */,
 				B739565B22E6C4E4000302FE /* RealEstateViewModel.swift in Sources */,
 				B792110D22E2464B000446B5 /* Property.swift in Sources */,
 				B792112E22E2BE28000446B5 /* FileReader.swift in Sources */,
 				B792113022E2C32E000446B5 /* RealEstate.swift in Sources */,
 				B792111B22E2593B000446B5 /* BankViewModel.swift in Sources */,
 				24C9CF4A22E905A4004325DC /* UITabbar+Monopoly.swift in Sources */,
-				B792110722E15401000446B5 /* Account.swift in Sources */,
+				B792110722E15401000446B5 /* Player.swift in Sources */,
 				B792110B22E155DF000446B5 /* Loan.swift in Sources */,
-				B792110922E15586000446B5 /* Bank.swift in Sources */,
+				B792110922E15586000446B5 /* Game.swift in Sources */,
 				B739565722E633F2000302FE /* FourStrata.swift in Sources */,
 				B79210E422E151E5000446B5 /* BankViewController.swift in Sources */,
 				B739566022E75FB7000302FE /* PropertyTableViewCell.swift in Sources */,
@@ -421,22 +426,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B79210F122E151E6000446B5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B79210FA22E151E6000446B5 /* MonopolyBankTests.swift in Sources */,
-				B739564622E60A47000302FE /* RealStateTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B79210F722E151E6000446B5 /* PBXTargetDependency */ = {
+		246C93052319C06700BD687C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B79210DD22E151E5000446B5 /* Monopoly */;
-			targetProxy = B79210F622E151E6000446B5 /* PBXContainerItemProxy */;
+			targetProxy = 246C93042319C06700BD687C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -460,6 +456,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		246C93072319C06700BD687C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2WD4LJ5535;
+				INFOPLIST_FILE = MonopolyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.MonopolyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly.app/Monopoly";
+			};
+			name = Debug;
+		};
+		246C93082319C06700BD687C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2WD4LJ5535;
+				INFOPLIST_FILE = MonopolyTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.MonopolyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly.app/Monopoly";
+			};
+			name = Release;
+		};
 		B79210FC22E151E6000446B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -612,51 +650,18 @@
 			};
 			name = Release;
 		};
-		B792110222E151E6000446B5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WD4LJ5535;
-				INFOPLIST_FILE = MonopolyBankTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.MonopolyBankTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly.app/Monopoly";
-			};
-			name = Debug;
-		};
-		B792110322E151E6000446B5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2WD4LJ5535;
-				INFOPLIST_FILE = MonopolyBankTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bonsebas.MonopolyBankTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Monopoly.app/Monopoly";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		246C93062319C06700BD687C /* Build configuration list for PBXNativeTarget "MonopolyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				246C93072319C06700BD687C /* Debug */,
+				246C93082319C06700BD687C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B79210D922E151E5000446B5 /* Build configuration list for PBXProject "Monopoly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -671,15 +676,6 @@
 			buildConfigurations = (
 				B79210FF22E151E6000446B5 /* Debug */,
 				B792110022E151E6000446B5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B792110122E151E6000446B5 /* Build configuration list for PBXNativeTarget "MonopolyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B792110222E151E6000446B5 /* Debug */,
-				B792110322E151E6000446B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

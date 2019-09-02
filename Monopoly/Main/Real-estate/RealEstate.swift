@@ -11,23 +11,23 @@ import Foundation
 class RealEstate {
     
     private var propertiesFactory: PropertiesFactory
-    private var owners: [Owner]
+    private var owners: [Player]
     var numberOfOwners: Int {
         return owners.count
     }
     
     init() {
         propertiesFactory = PropertiesFactory(file: "Properties")
-        let bank = Owner(name: "Banco")
+        let bank = Player(name: "Banco")
         bank.properties = propertiesFactory.properties
         owners = [bank]
     }
     
-    func ownerAt(_ position: Int) -> Owner {
+    func ownerAt(_ position: Int) -> Player {
         return owners[position]
     }
     
-    func addOwner(_ owner: Owner) {
+    func addOwner(_ owner: Player) {
         owners.insert(owner, at: 0)
     }
     
@@ -66,7 +66,7 @@ class RealEstate {
         return owner.bankruptcy()
     }
     
-    private func owner(for name: String) -> Owner? {
+    private func owner(for name: String) -> Player? {
         return owners.filter{ $0.name == name }.first
     }
 }

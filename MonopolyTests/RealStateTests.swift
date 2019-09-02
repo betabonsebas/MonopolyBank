@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import MonopolyBank
+@testable import Monopoly
 
 class RealStateTests: XCTestCase {
 
@@ -16,7 +16,7 @@ class RealStateTests: XCTestCase {
     }
 
     func testOwner() {
-        let owner = Owner(name: "Propietario1")
+        let owner = Player(name: "Propietario1")
         XCTAssertEqual(owner.name, "Propietario1")
     }
 }

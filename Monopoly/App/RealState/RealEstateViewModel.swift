@@ -39,7 +39,7 @@ class RealEstateViewModel {
     }
     
     func addOwner(with name: String) {
-        let owner = Owner(name: name)
+        let owner = Player(name: name)
         realEstate.addOwner(owner)
         buildData()
     }

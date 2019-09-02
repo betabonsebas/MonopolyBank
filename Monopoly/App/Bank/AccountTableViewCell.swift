@@ -17,8 +17,8 @@ class AccountTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setup(with account: Account) {
-        playerNameLabel.text = account.playerName
+    func setup(with account: Player) {
+        playerNameLabel.text = account.name
         loanAmountLabel.text = "\(account.totalLoansAmount())"
     }
     

@@ -9,22 +9,16 @@
 import Foundation
 
 class Loan {
-    private let player: Account
     private var amount: Int
     private var fees: [Int]
     
-    init(player: Account, amount: Int) {
-        self.player = player
+    init(amount: Int) {
         self.amount = amount
         self.fees = []
     }
     
     var remainingAmount: Int {
         return amount - amountPaid
-    }
-    
-    var playerName: String {
-        return player.playerName
     }
     
     func payFeeAndGiveBack(_ fee: Int) -> Int {

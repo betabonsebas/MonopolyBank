@@ -8,22 +8,14 @@
 
 import Foundation
 
-class Bank {
-    private var accounts: [Account]
+class Game {
+    var accounts: [Player]
     
-    init(accounts: [Account])  {
-        self.accounts = accounts
+    init()  {
+        self.accounts = []
     }
     
-    var numberOfAccounts: Int {
-        return accounts.count
-    }
-    
-    func accountAt(_ position: Int) -> Account {
-        return accounts[position]
-    }
-    
-    func addAccount(_ account: Account) {
+    func addAccount(_ account: Player) {
         accounts.append(account)
     }
     
@@ -50,8 +42,8 @@ class Bank {
         return account.totalLoansAmount()
     }
     
-    private func account(for name: String) -> Account? {
-        return accounts.filter{ $0.playerName == name }.first
+    private func account(for name: String) -> Player? {
+        return accounts.filter{ $0.name == name }.first
     }
 }
 

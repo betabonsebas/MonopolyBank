@@ -9,7 +9,7 @@
 import Foundation
 
 class RealEstateSection {
-    private var owner: Owner
+    private var owner: Player
     
     var properties: [Property] {
         return owner.properties
@@ -19,7 +19,7 @@ class RealEstateSection {
         return owner.name
     }
     
-    init(owner: Owner) {
+    init(owner: Player) {
         self.owner = owner
     }
 }

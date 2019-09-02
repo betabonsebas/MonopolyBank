@@ -52,7 +52,7 @@ class BankViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    private func captureAmountForLoanWith(account: Account, completion: @escaping (_ playername: String?) -> Void) {
+    private func captureAmountForLoanWith(account: Player, completion: @escaping (_ playername: String?) -> Void) {
         let alert = newAmountAlert()
         alert.addTextField(configurationHandler: nil)
         alert.addAction(continueAlertAction(handler: { _ in

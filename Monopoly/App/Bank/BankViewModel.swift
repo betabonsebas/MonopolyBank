@@ -9,19 +9,19 @@
 import Foundation
 
 class BankViewModel {
-    private var bank: Bank
+    private var bank: Game
     var reloadAccounts: (() -> Void)?
-    var captureAmountForNewLoanWith: ((_ account: Account, _ completion: @escaping (String?) -> Void) -> Void)?
+    var captureAmountForNewLoanWith: ((_ account: Player, _ completion: @escaping (String?) -> Void) -> Void)?
     
     init() {
-        bank = Bank(accounts: [])
+        bank = Game(accounts: [])
     }
     
     var numberOfAccounts: Int {
         return bank.numberOfAccounts
     }
     
-    func accountAt(index: Int) -> Account {
+    func accountAt(index: Int) -> Player {
         return bank.accountAt(index)
     }
     
@@ -29,7 +29,7 @@ class BankViewModel {
         guard let name = playerName, !name.isEmpty else {
             return
         }
-        bank.addAccount(Account(playerName: name))
+        bank.addAccount(Player(name: name))
         NotificationCenter.default.post(name: .bankCreateAccount, object: nil, userInfo: ["name": name])
         reloadAccounts?()
     }
@@ -56,17 +56,17 @@ class BankViewModel {
         })
     }
     
-    private func loanFor(account: Account, with amount: Int) {
+    private func loanFor(account: Player, with amount: Int) {
         do {
-            try bank.addLoan(for: account.playerName, amount: amount)
+            try bank.addLoan(for: account.name, amount: amount)
         } catch {
             print("error ocurred")
         }
     }
     
-    private func payLoanFor(account: Account, with amount: Int) {
+    private func payLoanFor(account: Player, with amount: Int) {
         do {
-            try bank.payLoans(with: amount, forPlayer: account.playerName)
+            try bank.payLoans(with: amount, forPlayer: account.name)
         } catch {
             print("error ocurred")
         }
