@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertiesViewController" customModule="Monopoly" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="tVc-Aj-9U8" id="ITP-SA-kYk"/>
+                <outlet property="view" destination="b5z-jH-1gX" id="wqB-of-Fix"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="b5z-jH-1gX">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-Aj-9U8">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5hi-p3-tzU"/>
+                        <outlet property="delegate" destination="-1" id="VBA-dI-FJZ"/>
+                    </connections>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdU-nE-JAd">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Propiedades" id="IXF-y9-ks6">
+                            <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="BC8-bh-x1b">
+                                <connections>
+                                    <action selector="doneAction:" destination="-1" id="CSK-vP-rzB"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KdU-nE-JAd" firstAttribute="leading" secondItem="Z7Q-7S-Fdn" secondAttribute="leading" id="5Z6-EY-deB"/>
+                <constraint firstItem="Z7Q-7S-Fdn" firstAttribute="bottom" secondItem="tVc-Aj-9U8" secondAttribute="bottom" id="8ct-d6-ij2"/>
+                <constraint firstItem="KdU-nE-JAd" firstAttribute="trailing" secondItem="Z7Q-7S-Fdn" secondAttribute="trailing" id="Dwt-OZ-1MS"/>
+                <constraint firstItem="KdU-nE-JAd" firstAttribute="top" secondItem="Z7Q-7S-Fdn" secondAttribute="top" id="J5t-3F-l0j"/>
+                <constraint firstItem="tVc-Aj-9U8" firstAttribute="leading" secondItem="Z7Q-7S-Fdn" secondAttribute="leading" id="Oz5-KB-ZTS"/>
+                <constraint firstItem="Z7Q-7S-Fdn" firstAttribute="trailing" secondItem="tVc-Aj-9U8" secondAttribute="trailing" id="abH-1c-3J1"/>
+                <constraint firstItem="tVc-Aj-9U8" firstAttribute="top" secondItem="KdU-nE-JAd" secondAttribute="bottom" id="oj6-L2-R5W"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Z7Q-7S-Fdn"/>
+            <point key="canvasLocation" x="-255.07246376811597" y="-188.16964285714286"/>
+        </view>
+    </objects>
+</document>

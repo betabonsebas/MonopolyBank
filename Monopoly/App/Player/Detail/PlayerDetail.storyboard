@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qdo-K5-2sU">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player Detail View Controller-->
+        <scene sceneID="uOK-sV-ZRc">
+            <objects>
+                <viewController id="Qdo-K5-2sU" customClass="PlayerDetailViewController" customModule="Monopoly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="84n-WO-lPO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Bgp-07-eZ6">
+                                <rect key="frame" x="16" y="60" width="382" height="60"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="NcE-k5-jQi">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Qk-2q-MFI">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agW-od-dx4">
+                                                <rect key="frame" x="0.0" y="39.5" width="170" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qUf-TI-liY">
+                                        <rect key="frame" x="186" y="0.0" width="196" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RQB-M2-q3P">
+                                                <rect key="frame" x="0.0" y="0.0" width="196" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGM-4A-jp7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="BQd-lN-wdj"/>
+                                                            <constraint firstAttribute="height" constant="60" id="m22-VE-GfJ"/>
+                                                        </constraints>
+                                                        <state key="normal" image="debt"/>
+                                                        <connections>
+                                                            <action selector="addLoanAction:" destination="Qdo-K5-2sU" eventType="touchUpInside" id="K7X-CY-Ofl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puv-kV-Yhx">
+                                                        <rect key="frame" x="68" y="0.0" width="60" height="60"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="card-payment"/>
+                                                        <connections>
+                                                            <action selector="payFeeAction:" destination="Qdo-K5-2sU" eventType="touchUpInside" id="VuJ-fa-fPA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9s6-sF-OZg">
+                                                        <rect key="frame" x="136" y="0.0" width="60" height="60"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="ShA-z8-vHm"/>
+                                                            <constraint firstAttribute="width" constant="60" id="kW4-VN-ymr"/>
+                                                        </constraints>
+                                                        <state key="normal" image="landlord"/>
+                                                        <connections>
+                                                            <action selector="buyPropertyAction:" destination="Qdo-K5-2sU" eventType="touchUpInside" id="tRa-53-KUb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BUD-iO-TkO">
+                                <rect key="frame" x="0.0" y="156.5" width="414" height="705.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qdo-K5-2sU" id="sCa-0D-nee"/>
+                                    <outlet property="delegate" destination="Qdo-K5-2sU" id="UBs-4U-2hp"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Propiedades" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYP-WM-PGF">
+                                <rect key="frame" x="159" y="128" width="96" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BUD-iO-TkO" firstAttribute="leading" secondItem="GHV-Zr-rMh" secondAttribute="leading" id="8Uk-iq-cNF"/>
+                            <constraint firstItem="GHV-Zr-rMh" firstAttribute="bottom" secondItem="BUD-iO-TkO" secondAttribute="bottom" id="H58-b4-TF0"/>
+                            <constraint firstItem="Bgp-07-eZ6" firstAttribute="top" secondItem="GHV-Zr-rMh" secondAttribute="top" constant="16" id="ISJ-ak-RD3"/>
+                            <constraint firstItem="hYP-WM-PGF" firstAttribute="top" secondItem="Bgp-07-eZ6" secondAttribute="bottom" constant="8" id="L3m-fi-L5G"/>
+                            <constraint firstItem="hYP-WM-PGF" firstAttribute="centerX" secondItem="84n-WO-lPO" secondAttribute="centerX" id="aYf-Jj-Pi9"/>
+                            <constraint firstItem="Bgp-07-eZ6" firstAttribute="leading" secondItem="GHV-Zr-rMh" secondAttribute="leading" constant="16" id="bAH-NP-zqo"/>
+                            <constraint firstItem="GHV-Zr-rMh" firstAttribute="trailing" secondItem="Bgp-07-eZ6" secondAttribute="trailing" constant="16" id="oUi-fh-YpU"/>
+                            <constraint firstItem="BUD-iO-TkO" firstAttribute="top" secondItem="hYP-WM-PGF" secondAttribute="bottom" constant="8" id="qUD-wM-ppA"/>
+                            <constraint firstItem="BUD-iO-TkO" firstAttribute="trailing" secondItem="GHV-Zr-rMh" secondAttribute="trailing" id="wMn-oj-FGr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GHV-Zr-rMh"/>
+                    </view>
+                    <connections>
+                        <outlet property="loanAmountLabel" destination="agW-od-dx4" id="WZJ-7P-qIV"/>
+                        <outlet property="playerNameLabel" destination="3Qk-2q-MFI" id="OSh-Ps-cPQ"/>
+                        <outlet property="tableView" destination="BUD-iO-TkO" id="Npi-Sg-9no"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10H-bM-iMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142.02898550724638" y="219.64285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="card-payment" width="50" height="50"/>
+        <image name="debt" width="50" height="50"/>
+        <image name="landlord" width="50" height="50"/>
+    </resources>
+</document>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountTableViewCell: UITableViewCell {
+class PlayerViewCell: UITableViewCell {
 
     @IBOutlet weak private var playerNameLabel: UILabel!
     @IBOutlet weak private var loanAmountLabel: UILabel!

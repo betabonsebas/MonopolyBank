@@ -8,77 +8,74 @@
 
 import Foundation
 
-protocol StrataProperty: Property {
-    var buildingPrice: Int { get }
-    var buildingSellPrice: Int { get }
-}
-
-extension StrataProperty {
-    var buildingSellPrice: Int {
-        return buildingPrice/2
+class StrataProperty: Property {
+    var data: PropertyData
+    var numberOfHouses: Int
+    var hasHotel: Bool
+    var mortaged: Bool
+    
+    required init(data: PropertyData) {
+        self.data = data
+        self.numberOfHouses = 0
+        self.hasHotel = false
+        self.mortaged = false
     }
     
-    func bankruptcy() -> Int {
-        let propertiesValue = housesValue + hotelsValue
-        numberOfHotels = 0
-        numberOfHouses = 0
-        return propertiesValue
+    var title: String {
+        return data.title
     }
     
     func mortgage() -> Int {
-        mortaged = true
-        let propertiesValue = housesValue + hotelsValue
-        numberOfHotels = 0
-        numberOfHouses = 0
-        return data.mortgage + propertiesValue
+        if mortaged {
+            return 0
+        } else {
+            mortaged = true
+            let propertiesValue = housesValue + hotelValue
+            hasHotel = false
+            numberOfHouses = 0
+            return data.mortgage + propertiesValue
+        }
     }
     
-    func buildHouses(_ number: Int) throws -> Int {
-        if number > 4 || numberOfHouses == 4 || (numberOfHouses + number) > 4 || numberOfHotels > 0 {
-            throw RealStateException.exceedsBuildsAllowed
-        }
-        
-        numberOfHouses += number
-        return number * buildingPrice
+    func unmortgage() -> Int {
+        mortaged = false
+        return data.mortgage + mortgageInterest
     }
     
-    func buildHotels(_ number: Int) throws -> Int {
-        if number > 1 || numberOfHotels > 0 {
-            throw RealStateException.exceedsBuildsAllowed
-        }
-        
-        if numberOfHouses < 4 {
-            throw RealStateException.noBuildsFound
-        }
-        
-        numberOfHouses = 0
-        numberOfHotels += number
-        return number * buildingPrice
+    func setHouses(_ number: Int) throws {
+        numberOfHouses = number
     }
     
-    func sellHouses(_ number: Int) throws -> Int {
-        if number > numberOfHouses {
-            throw RealStateException.noBuildsFound
+    func setHotel() throws {
+        if hasHotel {
+            numberOfHouses = 4
+        } else {
+            guard numberOfHouses == 4 else {
+                throw RealStateException.buildNotAllowed
+            }
+            numberOfHouses = 0
         }
-        
-        numberOfHouses -= number
-        return number * buildingSellPrice
+        hasHotel = !hasHotel
     }
     
-    func sellHotels(_ number: Int) throws -> Int {
-        if number > numberOfHotels {
-            throw RealStateException.noBuildsFound
-        }
-        
-        numberOfHotels -= number
-        return number * (buildingSellPrice + (buildingSellPrice * 4))
+    private var mortgageInterest: Int {
+        let value = Double(data.mortgage) * 1.1
+        return Int(value.rounded())
     }
     
     private var housesValue: Int {
-        return numberOfHouses * buildingSellPrice
+        return numberOfHouses * data.buildingSellPrice
     }
     
-    private var hotelsValue: Int {
-        return numberOfHotels * (buildingSellPrice + (buildingSellPrice * 4))
+    private var hotelValue: Int {
+        return data.buildingSellPrice + (data.buildingSellPrice * 4)
+    }
+    
+    func copy() -> Property {
+        let copy = StrataProperty(data: self.data)
+        copy.hasHotel = self.hasHotel
+        copy.numberOfHouses = self.numberOfHouses
+        copy.mortaged = self.mortaged
+        return copy
     }
 }

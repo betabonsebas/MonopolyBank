@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertyDetailViewController" customModule="Monopoly" customModuleProvider="target">
+            <connections>
+                <outlet property="hotelLabel" destination="wsa-ki-JVF" id="tbR-Vs-U4O"/>
+                <outlet property="housesLabel" destination="TXU-ON-0il" id="GUs-Qa-UCC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1pX-Wb-DXb">
+                    <rect key="frame" x="16" y="60" width="382" height="174"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="r6M-JQ-lHX">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" translatesAutoresizingMaskIntoConstraints="NO" id="Mho-PK-sdG">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="eqX-hf-m6A"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXU-ON-0il">
+                                    <rect key="frame" x="66" y="0.0" width="200" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="0vA-u3-r3v">
+                                    <rect key="frame" x="282" y="0.0" width="94" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="w03-L7-0qN"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="housesStepperAction:" destination="-1" eventType="valueChanged" id="1t0-2Y-W6a"/>
+                                    </connections>
+                                </stepper>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rqp-Io-FLT">
+                            <rect key="frame" x="0.0" y="52" width="382" height="36"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel-star" translatesAutoresizingMaskIntoConstraints="NO" id="uTE-4F-ZW5">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="M3m-83-Z97"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsa-ki-JVF">
+                                    <rect key="frame" x="66" y="0.0" width="200" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-Io-utI">
+                                    <rect key="frame" x="282" y="0.0" width="94" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="0A6-Xb-Uok"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="hotelStepperAction:" destination="-1" eventType="valueChanged" id="sUv-0H-L7q"/>
+                                    </connections>
+                                </stepper>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-ax-Mi6">
+                            <rect key="frame" x="0.0" y="104" width="382" height="70"/>
+                            <color key="backgroundColor" red="0.86274509799999999" green="0.0" blue="0.035294117649999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="ylY-IW-Cev"/>
+                            </constraints>
+                            <state key="normal" image="land-sales">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="sellPropertyAction:" destination="-1" eventType="touchUpInside" id="jHK-Hu-cor"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1pX-Wb-DXb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9rV-NB-IUF"/>
+                <constraint firstItem="1pX-Wb-DXb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="buq-Ou-DUp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1pX-Wb-DXb" secondAttribute="trailing" constant="16" id="sn0-WA-l4p"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.782608695652179" y="34.821428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hotel-star" width="50" height="50"/>
+        <image name="house" width="50" height="50"/>
+        <image name="land-sales" width="50" height="50"/>
+    </resources>
+</document>
